@@ -1,0 +1,30 @@
+new_list = list()
+
+def flattened(a_list):
+    """
+    This function takes a list as a parameter, and makes it flat.
+    """
+    for sub_ele in a_list:
+        if type(sub_ele) == list:
+            flattened(sub_ele)
+        else:
+            new_list.append(sub_ele)
+    
+    return new_list
+      
+
+input_1 = [[1,'a',['cat'],2],[[[3]],'dog'],4,5]
+flattened(a_list)
+
+
+list_final = list()  
+def reverse_list(a_list):
+    """
+    This function takes a list as a parameter, and makes it reversed
+    """
+    a_list.reverse()
+    for sub_ele in a_list: 
+        if type(sub_ele) == list:
+            sub_ele.reverse()
+            list_final.append(sub_ele)
+    return list_final
